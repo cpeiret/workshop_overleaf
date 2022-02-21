@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top = 25mm, bottom = 25mm, left = 25mm, right = 25mm]{geometry}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+\title{Ridiculously long title}
+\author{My name}
+\date{February 2022}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    This is my wonderful abstract.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{My subsection}
+
+I can format my text.
+
+I can make it \textbf{boldface}
+
+I can make it \textit{italics}
+
+I can make it \textit{\textbf{both bold face and italics.}}
+
+\subsection{My first list}
+
+List with bullet points:
+\begin{itemize}
+    \item The first item in my list.
+    \item The second item in my list.
+\end{itemize}
+
+A numbered list:
+\begin{enumerate}
+    \item The first item in my list
+    \item The second item in my list
+\end{enumerate}
+
+\section{Let's create an equation}
+
+\begin{equation}
+    E = mc^2
+    \label{equation1}
+\end{equation}
+
+If we want to include equations in our text we use $E = mc^2$. Equation \ref{equation1}
+
+\newpage
+\section{Images and figures!}
+
+We can also use cross-references with Image \ref{fig:my_label}. If I add another figure (Figure \ref{fig2:my_label}). If I switch them Latex respects the order of the figures.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{dog.jpg}
+    \caption{What a wonderful creature}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.25\textwidth]{dog.jpg}
+    \caption{What a wonderful creature}
+    \label{fig2:my_label}
+\end{figure}
+
+\newpage
+\section{Tables}
+
+This is my wonderful Table \ref{table1}.
+
+\begin{table}[h]
+\centering
+\caption{My wonderful table}
+\begin{tabular}{lll}
+\textbf{Column A} & \textbf{Column B} & \textbf{Column C} \\ \hline
+Row 1 A           & Row 1 B           & Row 1 C           \\
+Row 2 A           & Row 2 B           & Row 2 C           \\ \hline
+\end{tabular}
+\label{table1}
+\end{table}
+
+\section{How to cite}
+
+This is how to cite in Latex. Black holes are really cool \citep{hawking1974black}. \citet{hawking1974black} said black holes are really cool.
+
+\bibliography{bibliography.bib}
+
+\end{document}
